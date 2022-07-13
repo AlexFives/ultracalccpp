@@ -1,11 +1,13 @@
 #pragma once
 
-template<typename Derivative, typename T>
+#include <string>
+
+template<typename Derivative>
 class TokenInterface {
 public:
-    T calculate() const {
+    std::string getToken() const {
         auto derivative = this->cast();
-        return derivative->calcImpl();
+        return derivative->getTokenImpl();
     }
 
 private:
