@@ -1,12 +1,14 @@
 #pragma once
 
-#include "TokenInterface.hpp"
+#include "ContextToken.hpp"
 #include "Context.hpp"
+#include "constants.hpp"
+#include "exceptions.hpp"
 
 template<typename Derivative>
 class ParserInterface {
 public:
-    auto *parse(Context &ctx) const {
+    ContextToken parse(Context &ctx) const {
         auto derivative = this->cast();
         return derivative->parseImpl(ctx);
     }

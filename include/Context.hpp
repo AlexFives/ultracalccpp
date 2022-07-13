@@ -10,7 +10,7 @@ class Context {
 public:
     explicit Context(std::string other) : _ctx(std::move(other)) {}
 
-    [[nodiscard]] size_t step() { return ++this->_iter; }
+    size_t step() { return ++this->_iter; }
 
     [[nodiscard]] size_t iter() const { return this->_iter; }
 
