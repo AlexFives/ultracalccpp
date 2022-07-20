@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 file(GLOB SOURCE_FILES
         "src/*.cpp"
         "src/*.tpp"
+        "src/arithmetic/*.cpp"
         "src/parsers/*.cpp"
         "src/parsers/*.tpp"
         "src/tokens/*.cpp"
